@@ -1,0 +1,1 @@
+sh seata-server.sh -h 192.168.5.101 -p 8091

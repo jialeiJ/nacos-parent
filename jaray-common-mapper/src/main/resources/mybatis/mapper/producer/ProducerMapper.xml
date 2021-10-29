@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vienna.jaray.mapper.producer.ProducerMapper">
+    <resultMap id="CommonResultMap" type="producer">
+		<id property="c_id" column="cid"/>
+		<result property="c_name" column="cname"/>
+	</resultMap>
+	
+	<sql id="Base_Column_List" >
+        p.p_id, p.p_name
+    </sql>
+
+    <!-- 添加 -->
+    <insert id="add">
+    	insert into producer (`p_name`) 
+    	values (#{producer.pname})
+    </insert>
+    
+</mapper>
